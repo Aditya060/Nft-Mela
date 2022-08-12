@@ -28,7 +28,7 @@ const App = () => {
             const wallet_instance = new BeaconWallet({
                 name: "NFT marketplace",
                 preferredNetwork: NetworkType.CUSTOM,
-                colorMode: ColorMode.LIGHT,
+                colorMode: ColorMode.DARK,
                 disableDefaultEvents: false, // Disable all events / UI. This also disables the pairing alert.
                 eventHandlers: {
                 // To keep the pairing alert, we have to add the following default event handlers back
