@@ -27,7 +27,7 @@ const App = () => {
         (async () => {
             const wallet_instance = new BeaconWallet({
                 name: "NFT marketplace",
-                preferredNetwork: NetworkType.GHOSTNET,
+                preferredNetwork: NetworkType.CUSTOM,
                 colorMode: ColorMode.LIGHT,
                 disableDefaultEvents: false, // Disable all events / UI. This also disables the pairing alert.
                 eventHandlers: {

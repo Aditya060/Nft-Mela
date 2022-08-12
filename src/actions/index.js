@@ -14,7 +14,7 @@ export const connectWallet = ({ wallet, Tezos }) => {
 			if (!activeAccount) {
 				await wallet.requestPermissions({
 					network: {
-						type: NetworkType.GHOSTNET,
+						type: NetworkType.CUSTOM,
 						rpcUrl: "https://ghostnet.smartpy.io/",
 					},
 				});
@@ -130,7 +130,7 @@ export const collectNFT = ({ Tezos, amount, id }) => {
 			const op = await contract.methods
 				.collect(id)
 				.send({ mutez: true, amount: amount });
-			await op.confirmation();
+			//await op.confirmation();
             dispatch(fetchData());
 		} catch (e) {
 			console.log(e);
